@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Internship Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Student Internship Tracker</h1>
+        <p>Track your applications and manage your career.</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Dashboard -->
+        <section class="dashboard">
+
+            <div class="card">
+                <h3>Total Applications</h3>
+                <h2 id="totalCount">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Interviews</h3>
+                <h2 id="interviewCount">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Selected</h3>
+                <h2 id="selectedCount">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Pending</h3>
+                <h2 id="pendingCount">0</h2>
+            </div>
+
+        </section>
+
+        <!-- Add Internship Form -->
+        <section class="form-section">
+
+            <h2>Add Internship Application</h2>
+
+            <form id="internshipForm">
+
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input
+                        type="text"
+                        id="company"
+                        placeholder="Enter company name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Job Role</label>
+                    <input
+                        type="text"
+                        id="role"
+                        placeholder="e.g. Web Developer Intern"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Application Date</label>
+                    <input
+                        type="date"
+                        id="date"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="status">Application Status</label>
+
+                    <select id="status" required>
+                        <option value="Pending">Pending</option>
+                        <option value="Interview">Interview</option>
+                        <option value="Selected">Selected</option>
+                        <option value="Rejected">Rejected</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="addButton">
+                    + Add Application
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Applications List -->
+        <section class="applications-section">
+
+            <div class="section-header">
+                <h2>My Applications</h2>
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search company..."
+                    autocomplete="off"
+                >
+            </div>
+
+            <div id="applicationList">
+                <!-- JavaScript will display applications here -->
+            </div>
+
+            <p id="emptyMessage">
+                No applications added yet. Start by adding your first internship!
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Made with HTML, CSS & JavaScript | Student Internship Tracker</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
