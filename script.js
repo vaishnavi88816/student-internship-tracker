@@ -79,7 +79,6 @@ internshipForm.addEventListener("submit", function (event) {
 
 
 // ===== Display Applications =====
-
 function displayApplications() {
     applicationList.replaceChildren();
 
@@ -134,6 +133,7 @@ function displayApplications() {
 
     updateDashboard();
 }
+
 
 
 // ===== Delete Application =====
